@@ -8,7 +8,20 @@
   </head>
   <body>
     <h1>SUDOKU SOLVER</h1>
-    <div id="board"></div>
+    <div class="board-parent">
+      <div class="border-div hidden" id="border">
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+        <div class="cellBorder"></div>
+      </div>
+      <div id="board"></div>
+    </div>
     <button class="start-btn" id="start-btn" onclick="createBoard()">
       START
     </button>

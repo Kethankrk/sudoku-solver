@@ -11,6 +11,7 @@ let grid = [
 ];
 const board = document.getElementById("board");
 const startBtn = document.getElementById("start-btn");
+const boardBorder = document.getElementById("border");
 
 function createBoard() {
   if (board.innerHTML != "") {
@@ -26,6 +27,9 @@ function createBoard() {
       ["", "", "", "", "", "", "", "", ""],
       ["", "", "", "", "", "", "", "", ""],
     ];
+  }
+  else{
+    boardBorder.className = "border-div active"
   }
   console.log(board);
 

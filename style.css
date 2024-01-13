@@ -1,10 +1,10 @@
-body{
-    background-color: #1d1d1d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+body {
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 #board {
@@ -15,30 +15,56 @@ body{
   height: 400px;
 }
 
-.cell{
-    border: 1px solid yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    color: white;
+.cell {
+  border: 1px solid rgb(209, 209, 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  color: white;
 }
 
-.start-btn{
-    border: none;
-    padding: 8px 24px;
-    border-radius: 10px;
-    background-color: green;
-    font-weight: bold;
-    color: white;
-    letter-spacing: .5ch;
-    font-size: larger;
-    width: fit-content;
+.start-btn {
+  border: none;
+  padding: 8px 24px;
+  border-radius: 10px;
+  background-color: green;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5ch;
+  font-size: larger;
+  width: fit-content;
 }
 
-h1{
-    font-weight: bold;
-    color: yellow;
-    font-family: sans-serif;
-    font-size: xx-large;
+h1 {
+  font-weight: bold;
+  color: yellow;
+  font-family: sans-serif;
+  font-size: xx-large;
+}
+
+.board-parent {
+  position: relative;
+}
+
+.border-div {
+  z-index: -1;
+  position: absolute;
+  display: grid;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.cellBorder {
+  border: 2px solid white;
+}
+
+.active{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
 }
