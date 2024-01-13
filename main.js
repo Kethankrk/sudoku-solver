@@ -27,9 +27,8 @@ function createBoard() {
       ["", "", "", "", "", "", "", "", ""],
       ["", "", "", "", "", "", "", "", ""],
     ];
-  }
-  else{
-    boardBorder.className = "border-div active"
+  } else {
+    boardBorder.className = "border-div active";
   }
   console.log(board);
 
@@ -51,8 +50,6 @@ function takeInput() {
     const text = child.textContent;
     if (text != "") {
       grid[i][j] = parseInt(text);
-    } else {
-      grid[i][j] = 0;
     }
   });
   board.innerHTML = "";
@@ -107,7 +104,7 @@ async function solve(r = 0, c = 0) {
     return true;
   } else if (c == 9) {
     return await solve(r + 1, 0);
-  } else if (grid[r][c] != 0) {
+  } else if (grid[r][c] != "") {
     return await solve(r, c + 1);
   } else {
     for (let i = 1; i < 10; i++) {
